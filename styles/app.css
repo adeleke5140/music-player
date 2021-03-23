@@ -4,12 +4,17 @@ body, html{
 	box-sizing: border-box;	
 }
 
-#container{
+.amplitude-playlist{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	flex-direction: row;
+}
+
+.song-meta-data{
+	position: relative;
+	top:20px;
 }
 
 
