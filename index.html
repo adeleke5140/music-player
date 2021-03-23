@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Audio Player</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/5.3.0/amplitude.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+</head>
+<body>
+	<div id="container">
+		<div class="amplitude-playlist">
+			<div class="song amplitude-song-container" data-amplitude-song-index="0">
+				<div id="single-song-player">
+					<div class="control-container">
+						<div class="amplitude-play-pause" data-amplitude-song-index="0" id="play-pause"></div>
+					</div>
+					<div class="song-meta-data">
+						<span data-amplitude-song-info="0" class="song-title" name="Boom Sound">Boom Sound</span>
+					</div>
+					
+				</div>
+			</div>
+			<div class="song amplitude-song-container" data-amplitude-song-index="1">
+				<div id="single-song-player">
+					<div class="control-container">
+						<div class="amplitude-play-pause" data-amplitude-song-index="1"id="play-pause"></div>
+					</div>
+					<div class="song-meta-data">
+						<span data-amplitude-song-info="1" name="Clap Sound">Clap Sound</span>
+					</div>
+					
+				</div>
+			</div>
+			<div class="song amplitude-song-container" data-amplitude-song-index="2">
+				<div id="single-song-player">
+					<div class="control-container">
+						<div class="amplitude-play-pause" data-amplitude-song-index="2" id="play-pause"></div>
+					</div>
+					<div class="song-meta-data">
+						<span data-amplitude-song-info="2">Hihat sound</span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		Amplitude.init({
+			"songs": [{
+				"name":"Boom Sound",
+				"url": "sounds/boom.wav",
+				"artist":'Speaking Hausa'
+			},
+			{
+				"name": "Clap Sound",
+				"url":"sounds/clap.wav"
+
+			},
+			{
+				"name":"Hihat sound",
+				"url":"sounds/hihat.wav"
+			}],
+			"debug": true
+		})
+
+		Amplitude.setSongMetaData("0","Boom Sound")
+		//variables
+		// const playButton = document.querySelector('div.amplitude-play-pause.amplitude-paused');
+		// const songText = document.querySelector('p.song-name')
+		// //functions
+		// function addText(){
+		// 	songText.style.visibility ="visible"
+		// // 	const pauseButton = document.querySelector('div.amplitude-play-pause.amplitude-playing');
+		// // 	function removeText(){
+		// // 	return songText.style.visibility="hidden"
+		// // }
+		// // 	pauseButton.addEventListener('click',removeText)
+		// }
+		
+		// //DOM eventListeners
+		// playButton.addEventListener('click',addText)
+		
+	</script>
+</body>
+</html>
